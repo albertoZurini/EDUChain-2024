@@ -73,7 +73,7 @@ html, body {
   
   }
 }
-
+/*
 .neon-btn:hover {
   background: #03e9f4;
   color: #fff;
@@ -83,7 +83,7 @@ html, body {
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
 }
-
+*/
 .neon-btn.red:hover {
   background: #f40303;
   color: #fff;
