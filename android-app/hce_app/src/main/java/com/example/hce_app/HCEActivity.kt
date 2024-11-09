@@ -37,12 +37,14 @@ class HCEActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val b = intent.extras
-        val data = b!!.getString("data").toString()
-        if(data.length > 0){
-            if (data != null) {
-                setNFCMessage(data)
+        try {
+            val data = b!!.getString("data").toString()
+            if (data.length > 0) {
+                if (data != null) {
+                    setNFCMessage(data)
+                }
             }
-        }
+        } catch(e: Exception) {}
 
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
@@ -104,7 +106,7 @@ class HCEActivity : ComponentActivity() {
         // Combine all the data into a metamask url
         var urlToCast: String = ""
         if(message.length == 0) {
-            urlToCast = "web+stellar:$address?amount=$amount";
+            urlToCast = "https://metamask.app.link/dapp/mint-nft-roan-six.vercel.app";
         } else {
             urlToCast = message
         }
