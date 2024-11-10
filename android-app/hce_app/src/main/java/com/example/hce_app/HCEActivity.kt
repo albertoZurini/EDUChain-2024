@@ -106,7 +106,7 @@ class HCEActivity : ComponentActivity() {
         // Combine all the data into a metamask url
         var urlToCast: String = ""
         if(message.length == 0) {
-            urlToCast = "https://metamask.app.link/dapp/mint-nft-roan-six.vercel.app";
+            urlToCast = "https://metamask.app.link/dapp/hack.zurini.dev";
         } else {
             urlToCast = message
         }

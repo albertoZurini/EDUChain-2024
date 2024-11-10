@@ -29,13 +29,11 @@ export default function Home() {
     // @ts-expect-error "ciao"
     const tx = await contract.mint();
     await tx.wait();  // Wait for transaction confirmation
-    alert("NFT Minted:" + tx.hash);
   }
 
   return (
-<div>
-
-    <a href="#" className={`vote-btn green neon-btn ` + (isMinting ? "" : "animated-neon")} onClick={mintNFT}>
+<div onClick={async () => {mintNFT()}}>
+    <a href="#" className={`vote-btn green neon-btn ` + (isMinting ? "" : "animated-neon")} >
                 <span className={isMinting ? `animated` : ""}></span>
                 <span className={isMinting ? `animated` : ""}></span>
                 <span className={isMinting ? `animated` : ""}></span>
